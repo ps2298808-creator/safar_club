@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safar Club | Curated Social Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Nav Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(18, 18, 18, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #ff6b81; /* Pink accent */
+        }
+
+        .apply-nav {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ff6b81;
+            border: 2px solid #ff6b81;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .apply-nav:hover {
+            background-color: #ff6b81;
+            color: #121212;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9)), url('https://images.unsplash.com/photo-1540339832862-474599807836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        header h1 span {
+            color: #ff6b81;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background-color: #ff6b81;
+            color: #121212;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 129, 0.4);
+        }
+
+        /* Details Section */
+        .features {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-box {
+            background-color: #1e1e1e;
+            padding: 40px 20px;
+            border-radius: 15px;
+            border-top: 4px solid #ff6b81;
+        }
+
+        .feature-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6b81;
+        }
+
+        /* Itinerary/Price Section */
+        .details-section {
+            padding: 80px 5%;
+            background-color: #121212;
+            text-align: center;
+        }
+
+        .details-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .price-box {
+            background-color: #ff6b81;
+            color: #121212;
+            display: inline-block;
+            padding: 30px 60px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .price-box h3 {
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        .price-box p {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #0a0a0a;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SAFAR CLUB</div>
+        <a href="#apply" class="apply-nav">Request Invite</a>
+    </nav>
+
+    <header>
+        <h1>Your Out-Of-Office <br><span>Starts Here.</span></h1>
+        <p>Join 15 curated corporate professionals for a high-energy, 5-day social expedition in Bangkok & Pattaya. No tourist traps. Just vibes, yachts, and the right crowd.</p>
+        <button class="cta-btn" onclick="document.getElementById('apply').scrollIntoView({behavior: 'smooth'})">Apply for Invitation</button>
+    </header>
+
+    <section class="features">
+        <div class="feature-box">
+            <h3>⚖️ Strict 50:50 Ratio</h3>
+            <p>We curate our guest list to ensure a perfect balance. It’s a singles trip designed for real connections and great conversations.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🛥️ A-Lister Experiences</h3>
+            <p>From private sunset yacht parties to VIP tables at Bangkok's most exclusive rooftop speakeasies. We skip the lines.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📸 Pro Content Day</h3>
+            <p>Look as good online as you do in person. Our trip includes a local professional photographer to capture pro-level shots of you.</p>
+        </div>
+    </section>
+
+    <section class="details-section">
+        <h2>The Bangkok Edition</h2>
+        <p style="margin-bottom: 30px; font-size: 1.2rem;">May 2026 • 4 Nights / 5 Days</p>
+        
+        <div class="price-box">
+            <h3>₹50,000</h3>
+            <p>Per Person (Excl. Flights)</p>
+        </div>
+
+        <p style="max-width: 600px; margin: 0 auto 40px auto; color: #aaa;">
+            <strong>Includes:</strong> 4-Star Boutique Stay (Double Sharing) • VIP Airport Transfers • Private Yacht Charter • 2 Curated Group Dinners • Dedicated Host
+        </p>
+
+        <div id="apply" style="margin-top: 50px;">
+            <h3 style="margin-bottom: 20px;">Ready to join the club?</h3>
+            <p style="margin-bottom: 20px; color: #aaa;">Spaces are strictly limited to 15 members. Drop your email below and our team will schedule a quick vibe-check call.</p>
+            <form onsubmit="alert('In a live version, this would link to your Google Form or email!'); return false;">
+                <input type="email" placeholder="Your work or personal email" style="padding: 15px; width: 300px; border-radius: 5px; border: none; outline: none; margin-bottom: 10px;">
+                <br>
+                <button type="submit" class="cta-btn" style="padding: 15px 30px; font-size: 1rem;">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Safar Club. Curated Social Travel.</p>
+    </footer>
+
+</body>
+</html>
